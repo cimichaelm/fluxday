@@ -52,7 +52,6 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    @user = current_user
     @users = User.active.by_name
     respond_to do |format|
       if @user.update(user_params)
