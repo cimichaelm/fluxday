@@ -29,7 +29,11 @@
     </div>
 
     <div class="">
+	    <% if @user %>
+	    <% if @user.image.present? %>
       <%= image_tag(@user.image.thumbnail, :class => 'rounded_pic centered') %>
+	    <% end %>
+	    <% end %>
     </div>
 
 
