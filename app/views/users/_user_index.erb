@@ -9,7 +9,10 @@
       <div class="user-min">
         <div class="user-name">
           <div class="left">
-            <%= link_to image_tag(user.image.icon, :class => 'rounded_pic pic48'), user_path(user) %>
+	    <% if @user.image.icon.present %>	  
+	      <%= link_to image_tag(user.image.icon, :class => 'rounded_pic pic48'), user_path(user) %>
+	    <% end %>
+    
           </div>
           <div class="left info">
             <%= link_to user.name, user_path(user), :class => 'name' %>
