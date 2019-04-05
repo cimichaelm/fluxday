@@ -3,9 +3,11 @@
       <div class="user-list-item large-6 columns left">
         <div class="user-name">
           <div class="left">
+	    <% if @user %>
 	    <% if @user.image.present? %>
 	    <% if @user.image.icon.present? %>
               <%= link_to image_tag(user.image.icon, :class => 'rounded_pic pic48'), user_path(user), :remote => true %>
+	    <% end %>
 	    <% end %>
 	    <% end %>
           </div>
