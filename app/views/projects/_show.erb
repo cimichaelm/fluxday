@@ -1,7 +1,9 @@
 <div class="pane3-padding">
   <div class="head-row project">
     <div class="cols">
+      <% if @project.image.present? %>
       <%= image_tag(project.image.thumbnail) %>
+      <% end %>
     </div>
     <div class="right options">
       <% if can? :manage, @project %>
