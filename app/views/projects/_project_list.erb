@@ -11,7 +11,9 @@
           <div class="project card-transparent transition prj-<%= project.id %>">
             <div class="cols ths">
 	      <% if @project %>
+	      <% if @project.image %>
               <%= image_tag(project.image.icon) %>
+	      <% end %>
 	      <% end %>
             </div>
             <div class="cols">
