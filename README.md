@@ -94,7 +94,7 @@ docker-compose up -d --build --remove-orphans
 And to access the container:
 
 ```sh
-docker exec -it fluxday /bin/bash
+docker exec -it fluxday-app /bin/bash
 ```
 
 #### 2. Without docker
